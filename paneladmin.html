@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel | VIP Adventour</title>
+<meta name="description" content="Edita los servicios de VIP Adventour.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="imagenes/favicon.png">
+<script src="app.js" defer></script>
+</head>
+<body data-page="paneladmin">
+<header class="top"><div class="wrap"></div></header>
+<main class="wrap">
+<h1>Panel de administración</h1>
+<p><a class="btn sec" href="qr.html">Generar código QR</a></p>
+<h2>Clientes registrados</h2>
+<p id="resumenClientes"></p>
+<div class="scroll"><table><thead><tr><th>Cliente</th><th>Documento</th><th>Contacto</th><th>Compras</th><th>Total comprado</th></tr></thead><tbody id="clientes"></tbody></table></div>
+<p class="nota">Los registros se guardan en el navegador donde se crea la cuenta. Cada cliente recibe una copia por correo en la agencia al registrarse.</p>
+<h2 style="margin-top:40px">Historial de compras</h2>
+<p id="resumen"></p>
+<div class="scroll"><table><thead><tr><th>Folio</th><th>Cliente</th><th>Servicio</th><th>Personas</th><th>Total</th><th>Pago</th><th>Estado</th><th></th></tr></thead><tbody id="pedidos"></tbody></table></div>
+<p><button class="btn sec" id="csv" type="button">Descargar en Excel (CSV)</button></p>
+<h2 style="margin-top:40px">Editar servicios</h2>
+<div id="editor"></div>
+<div class="acciones"><button class="btn" id="guardar" type="button">Guardar cambios</button><button class="btn sec" id="restaurar" type="button">Restaurar originales</button><button class="btn sec" id="salir" type="button">Cerrar sesión</button></div>
+<p class="msg" id="mensaje" aria-live="polite"></p>
+</main>
+<footer class="wrap foot">VIP Adventour. Tours y aventuras en la bahía.</footer>
+</body>
+</html>
